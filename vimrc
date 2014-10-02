@@ -38,3 +38,9 @@ set background=dark
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" mustang color scheme
+set t_Co=256
+colorscheme mustang
+
+" Trailing white space color
+highlight ExtraWhitespace ctermbg=Green guibg=LightGreen
