@@ -1,3 +1,6 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " syntax highlighting and auto-identation
 syntax on
 filetype indent on
