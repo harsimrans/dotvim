@@ -19,6 +19,7 @@ set showcmd
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+set noshowmode " turn off default mode indicator
 
 " set up line numbers
 set number
@@ -32,4 +33,8 @@ set noswapfile
 " font options
 set background=dark
 
+"NERDTree settings
+"  load NERDTree if no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
