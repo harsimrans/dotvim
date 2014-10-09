@@ -44,3 +44,9 @@ colorscheme mustang
 
 " Trailing white space color
 highlight ExtraWhitespace ctermbg=Green guibg=LightGreen
+
+" syntastic config
+let g:syntastic_quiet_messages = { "type": "style" }
+
+" airline
+let g:airline#extensions#whitespace#show_message = 0
