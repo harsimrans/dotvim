@@ -1,5 +1,25 @@
-call pathogen#infect()
-call pathogen#helptags()
+" Of course
+set nocompatible
+
+" Required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'bling/vim-airline'
+
+Bundle 'tpope/vim-fugitive'
+
+Bundle 'scrooloose/nerdtree'
+
+Bundle 'scrooloose/syntastic'
+
+
+
+" call pathogen#infect()
+" call pathogen#helptags()
 
 " syntax highlighting and auto-identation
 syntax on
@@ -43,10 +63,14 @@ set t_Co=256
 colorscheme mustang
 
 " Trailing white space color
-highlight ExtraWhitespace ctermbg=Green guibg=LightGreen
+:highlight ExtraWhitespace ctermbg=blue guibg=blue
 
 " syntastic config
 let g:syntastic_quiet_messages = { "type": "style" }
 
 " airline
 let g:airline#extensions#whitespace#show_message = 0
+
+" highlight tabs and trailing spaces
+set listchars=tab:>-,trail:-
+set list
