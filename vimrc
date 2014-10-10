@@ -1,25 +1,21 @@
 " Of course
-set nocompatible
+  set nocompatible
 
 " Required Vundle setup
-filetype off
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
+  filetype off
+  set runtimepath+=~/.vim/bundle/vundle
+  call vundle#rc()
 
-Bundle 'gmarik/vundle'
+  Bundle 'gmarik/vundle'
 
-Bundle 'bling/vim-airline'
+  Bundle 'bling/vim-airline'
 
-Bundle 'tpope/vim-fugitive'
+  Bundle 'tpope/vim-fugitive'
 
-Bundle 'scrooloose/nerdtree'
+  Bundle 'scrooloose/nerdtree'
 
-Bundle 'scrooloose/syntastic'
+  Bundle 'scrooloose/syntastic'
 
-
-
-" call pathogen#infect()
-" call pathogen#helptags()
 
 " syntax highlighting and auto-identation
 syntax on
@@ -58,9 +54,9 @@ set background=dark
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" mustang color scheme
-set t_Co=256
-colorscheme mustang
+if &term =~? 'mlterm\|xterm'
+	set t_Co=256
+endif
 
 " Trailing white space color
 :highlight ExtraWhitespace ctermbg=blue guibg=blue

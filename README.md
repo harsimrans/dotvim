@@ -12,9 +12,9 @@ cd ~ <br/>
 git clone http://github.com/harsimrans/dotvim.git ~/.vim <br/>
 ln -s ~/.vim/vimrc ~/.vimrc <br/>
 cd ~/.vim <br/>
-git submodule init <br/>
-git submodule update <br/>
+git clone https://github.com/gmarik/Vundle.vim.git bundle/vundle<br/>
+vim +BundleInstall +qall or inside vim run ":BundleInstall"<br/>
 
 <b>UPDATING:</b><br/>
  To update run "git pull" <br>
- To update only the plugins run "git submodule foreach git pull origin master" in .vim directory.<br/>
+ Then run ":BundleInstall" in vim<br/>
