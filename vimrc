@@ -1,5 +1,5 @@
 " Of course
-  set nocompatible
+"  set nocompatible
 
 " Required Vundle setup
   filetype off
@@ -22,6 +22,9 @@
 syntax on
 filetype indent on
 
+set clipboard=unnamedplus
+vnoremap <C-c> "+y
+
 " tabs to 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -40,7 +43,7 @@ set noshowmode " turn off default mode indicator
 
 " set up line numbers
 set number
-highlight LineNr ctermfg=white
+highlight LineNr ctermfg=grey
 
 " disable any backups
 set nobackup
@@ -169,3 +172,5 @@ function! TrimWhiteSpace()
         %s/\s\+$//e
 endfunction
 command FixWhiteSpace execute ":call TrimWhiteSpace()"
+
+:set clipboard+=unnamedplus
