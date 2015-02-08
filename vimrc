@@ -174,3 +174,6 @@ endfunction
 command FixWhiteSpace execute ":call TrimWhiteSpace()"
 
 :set clipboard+=unnamedplus
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
