@@ -1,5 +1,5 @@
 " Of course
-"  set nocompatible
+set nocompatible
 
 " Required Vundle setup
   filetype off
